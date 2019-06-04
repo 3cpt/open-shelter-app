@@ -8,12 +8,14 @@ namespace OpenShelter.Models
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
 
-        public string Name { get; set; }
-
-        public string TaskType { get; set; }
-
         public DateTime EnterTime { get; set; }
 
         public DateTime ExitTime { get; set; }
+
+        [Indexed]
+        public int VolunterId { get; set; }
+
+        [Indexed]
+        public int TaskTypeId { get; set; }
     }
 }
