@@ -14,9 +14,9 @@ namespace OpenShelter.Services
         {
             try
             {
-                using (var conexao = new SQLiteConnection(this.DbPath))
+                using (var connection = new SQLiteConnection(this.DbPath))
                 {
-                    conexao.CreateTable<T>();
+                    connection.CreateTable<T>();
                 }
             }
             catch (SQLiteException ex)
@@ -29,9 +29,9 @@ namespace OpenShelter.Services
         {
             try
             {
-                using (var conexao = new SQLiteConnection(this.DbPath))
+                using (var connection = new SQLiteConnection(this.DbPath))
                 {
-                    return conexao.Table<T>().FirstOrDefault(expression);
+                    return connection.Table<T>().FirstOrDefault(expression);
                 }
             }
             catch (SQLiteException ex)
@@ -45,9 +45,9 @@ namespace OpenShelter.Services
         {
             try
             {
-                using (var conexao = new SQLiteConnection(this.DbPath))
+                using (var connection = new SQLiteConnection(this.DbPath))
                 {
-                    return conexao.Table<T>().Where(expression);
+                    return connection.Table<T>().Where(expression);
                 }
             }
             catch (SQLiteException ex)
