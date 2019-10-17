@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:OpenShelter" x:Class="OpenShelter.MainPage">
+    <StackLayout>
+        <Label Text="Welcome to Xamarin.Forms!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+
+        <ListView x:Name="EmployeeView" ItemsSource="{Binding Employees}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding DisplayName}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Label Text="Welcome to Xamarin.Forms!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+
+        <Button Text="Entradas" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Clicked="OnAddAttendancePageButtonClicked" />
+
+        <Button Text="Admin Login" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Clicked="OnAdminPageButtonClicked" />
+    </StackLayout>
+</ContentPage>

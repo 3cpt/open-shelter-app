@@ -15,7 +15,11 @@ namespace OpenShelter.Models
         [Indexed]
         public int VolunterId { get; set; }
 
+        public string Name { get; set; }
+
         [Indexed]
         public int TaskTypeId { get; set; }
+
+        public string TaskType { get; set; }
     }
 }

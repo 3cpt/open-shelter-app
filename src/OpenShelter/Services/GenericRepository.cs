@@ -2,41 +2,28 @@
 using System.IO;
 using SQLite;
 using System.Linq.Expressions;
-using System.Collections;
-using System.Linq;
 using System.Collections.Generic;
 
 namespace OpenShelter.Services
 {
     public abstract class GenericRepository<T> where T : new()
     {
+        private readonly SQLiteConnection connection;
+
         protected GenericRepository()
         {
-            try
-            {
-                using (var connection = new SQLiteConnection(this.DbPath))
-                {
-                    connection.CreateTable<T>();
-                }
-            }
-            catch (SQLiteException ex)
-            {
-                // Log.Info("SQLiteEx", ex.Message);
-            }
+            connection = new SQLiteConnection(this.DbPath);
+            connection.CreateTable<T>();
         }
 
         public T Get(Expression<Func<T, bool>> expression)
         {
             try
             {
-                using (var connection = new SQLiteConnection(this.DbPath))
-                {
-                    return connection.Table<T>().FirstOrDefault(expression);
-                }
+                return connection.Table<T>().FirstOrDefault(expression);
             }
-            catch (SQLiteException ex)
+            catch
             {
-                // Log.Info("SQLiteEx", ex.Message);
                 return default;
             }
         }
@@ -45,15 +32,23 @@ namespace OpenShelter.Services
         {
             try
             {
-                using (var connection = new SQLiteConnection(this.DbPath))
-                {
-                    return connection.Table<T>().Where(expression);
-                }
+                return connection.Table<T>().Where(expression);
             }
-            catch (SQLiteException ex)
+            catch
             {
-                // Log.Info("SQLiteEx", ex.Message);
-                return null;
+                return default;
+            }
+        }
+
+        public int Add(T entity)
+        {
+            try
+            {
+                return connection.Insert(entity);
+            }
+            catch
+            {
+                return default;
             }
         }
 

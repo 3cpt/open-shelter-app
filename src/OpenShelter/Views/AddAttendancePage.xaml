@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="OpenShelter.Views.AddAttendancePage">
+    <StackLayout x:Name="mainStackLayout" Padding="10">
+        <Entry x:Name="txtUsername" Placeholder="Utilizador" />
+
+        <Entry x:Name="txtPassword" Placeholder="Palavra-chave" />
+
+        <Entry x:Name="txtSelectedTaskType" Placeholder="Tipo de Tarefa" IsReadOnly="True" />
+
+        <!--<Picker Title="Selecione um tipo de tarefa" SelectedIndexChanged="OnPickerSelectedIndexChanged">
+            <Picker.Items>
+                <x:String>none</x:String>
+            </Picker.Items>
+        </Picker>-->
+
+        <Button Text="Adicionar entrada" Clicked="OnAddAttendanceClick" />
+    </StackLayout>
+</ContentPage>
