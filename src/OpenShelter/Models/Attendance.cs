@@ -17,9 +17,6 @@ namespace OpenShelter.Models
 
         public string Name { get; set; }
 
-        [Indexed]
-        public int TaskTypeId { get; set; }
-
         public string TaskType { get; set; }
     }
 }

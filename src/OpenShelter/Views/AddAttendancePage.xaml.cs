@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using OpenShelter.Models;
 using OpenShelter.Services;
 using Xamarin.Forms;
@@ -9,37 +7,15 @@ namespace OpenShelter.Views
 {
     public partial class AddAttendancePage : ContentPage
     {
-        private readonly VolunterRepository volunterRepository;
-        private readonly TaskTypeRepository taskTypeRepository;
-        private readonly AttendanceRepository attendanceRepository;
-        private readonly SettingsRepository settingsRepository;
+        private readonly IVolunterRepository volunterRepository;
+        private readonly IAttendanceRepository attendanceRepository;
 
         public AddAttendancePage()
         {
             InitializeComponent();
 
-            var picker = new Picker
-            {
-                Title = "Selecione um tipo de tarefa",
-                VerticalOptions = LayoutOptions.CenterAndExpand
-            };
-
-
-            var taskTypes = this.taskTypeRepository.GetAll(t => true).Select(t => t.Description);
-
-            foreach (var taskType in taskTypes)
-            {
-                picker.Items.Add(taskType);
-            }
-
-            picker.SelectedIndexChanged += OnPickerSelectedIndexChanged;
-
-            this.mainStackLayout.Children.Add(picker);
-
-            this.volunterRepository = DependencyService.Get<VolunterRepository>();
-            this.taskTypeRepository = DependencyService.Get<TaskTypeRepository>();
-            this.attendanceRepository = DependencyService.Get<AttendanceRepository>();
-            this.settingsRepository = DependencyService.Get<SettingsRepository>();
+            this.volunterRepository = DependencyService.Get<IVolunterRepository>();
+            this.attendanceRepository = DependencyService.Get<IAttendanceRepository>();
         }
 
         async void OnAddAttendanceClick(object sender, EventArgs e)
@@ -47,47 +23,55 @@ namespace OpenShelter.Views
             if (string.IsNullOrWhiteSpace(this.txtUsername.Text))
             {
                 await DisplayAlert("Aviso", "Indique o utilizador", "Ok");
+                return;
             }
             if (string.IsNullOrWhiteSpace(this.txtPassword.Text))
             {
                 await DisplayAlert("Aviso", "Indique a palavra-chave", "Ok");
+                return;
             }
-            if (string.IsNullOrWhiteSpace(this.txtSelectedTaskType.Text))
-            {
-                await DisplayAlert("Aviso", "Selecione o tipo de tarefa", "Ok");
-            }
+            var volunteers = this.volunterRepository.GetAll(v => true);
 
             var volunter = this.volunterRepository.Get(v => v.Username == this.txtUsername.Text.ToLower());
 
             if (volunter == null)
             {
-                await DisplayAlert("Aviso", "Utilizador errado", "Ok");
+                await DisplayAlert("Aviso", "Utilizador não encontrado", "Ok");
+                return;
             }
 
-            if (volunter.AccessCode.ToString() == this.txtPassword.Text)
+            if (volunter.AccessCode.ToString() != this.txtPassword.Text)
             {
                 await DisplayAlert("Aviso", "Palavra-chave errada", "Ok");
+                return;
             }
 
+            var taskTypePicker = pickerTaskType.SelectedItem;
 
+            if (taskTypePicker == null)
+            {
+                await DisplayAlert("Aviso", "Selecione o tipo de tarefa", "Ok");
+                return;
+            }
             var attendance = new Attendance
             {
-
+                EnterTime = DateTime.Now,
+                Name = volunter.Name,
+                TaskType = taskTypePicker.ToString(),
+                VolunterId = volunter.Id,
             };
 
-            await Navigation.PushAsync(new AddAttendancePage());
-        }
-
-
-        void OnPickerSelectedIndexChanged(object sender, EventArgs e)
-        {
-            var picker = (Picker)sender;
-            int selectedIndex = picker.SelectedIndex;
-
-            if (selectedIndex != -1)
+            try
             {
-                this.txtSelectedTaskType.Text = picker.Items[selectedIndex];
+                this.attendanceRepository.Add(attendance);
+                await DisplayAlert("SUCESSO", $"Olá {volunter.Name}. Entrada registada com sucesso, os gatinhos agradecem!", "Ok");
             }
+            catch (Exception)
+            {
+                await DisplayAlert("Aviso", "Aconteceu algo inesperado. Contacta quem fez a aplicação.", "Ok");
+            }
+
+            await Navigation.PopAsync();
         }
     }
 }

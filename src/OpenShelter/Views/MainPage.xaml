@@ -1,20 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:OpenShelter" x:Class="OpenShelter.MainPage">
     <StackLayout>
-        <Label Text="Welcome to Xamarin.Forms!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+        <Label Text="Welcome to Xamarin.Forms!" />
 
-        <ListView x:Name="EmployeeView" ItemsSource="{Binding Employees}">
+        <ListView x:Name="EmployeeView" ItemsSource="{Binding Attendances}">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <TextCell Text="{Binding DisplayName}" />
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Fill" BackgroundColor="Olive">
+                            <StackLayout Orientation="Vertical">
+                                <Label Text="{Binding Name}" FontSize="24" AbsoluteLayout.LayoutBounds="0.25, 0.25, 400, 40" />
+                                <Label Text="{Binding TaskType}" AbsoluteLayout.LayoutBounds="50, 35, 200, 25" />
+                                <Label Text="{Binding EnterTime}" AbsoluteLayout.LayoutBounds="50, 35, 200, 25" />
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
 
-        <Label Text="Welcome to Xamarin.Forms!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+        <Label Text="ahah ahaha ahahah" />
 
-        <Button Text="Entradas" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Clicked="OnAddAttendancePageButtonClicked" />
+        <Button Text="Entradas" Clicked="OnAddAttendancePageButtonClicked" />
 
-        <Button Text="Admin Login" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Clicked="OnAdminPageButtonClicked" />
+        <Button Text="Admin Login" Clicked="OnAdminPageButtonClicked" />
     </StackLayout>
 </ContentPage>

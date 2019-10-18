@@ -5,13 +5,14 @@
 
         <Entry x:Name="txtPassword" Placeholder="Palavra-chave" />
 
-        <Entry x:Name="txtSelectedTaskType" Placeholder="Tipo de Tarefa" IsReadOnly="True" />
-
-        <!--<Picker Title="Selecione um tipo de tarefa" SelectedIndexChanged="OnPickerSelectedIndexChanged">
+        <Picker x:Name="pickerTaskType" Title="Selecione um tipo de tarefa">
             <Picker.Items>
-                <x:String>none</x:String>
+                <x:String>Limpezas</x:String>
+                <x:String>Medicação</x:String>
+                <x:String>Visita</x:String>
+                <x:String>Outros</x:String>
             </Picker.Items>
-        </Picker>-->
+        </Picker>
 
         <Button Text="Adicionar entrada" Clicked="OnAddAttendanceClick" />
     </StackLayout>

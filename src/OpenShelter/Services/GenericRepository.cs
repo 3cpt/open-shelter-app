@@ -6,14 +6,18 @@ using System.Collections.Generic;
 
 namespace OpenShelter.Services
 {
-    public abstract class GenericRepository<T> where T : new()
+    public abstract class GenericRepository<T> : IGenericRepository<T> where T : new()
     {
         private readonly SQLiteConnection connection;
 
         protected GenericRepository()
         {
-            connection = new SQLiteConnection(this.DbPath);
+            var path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+            path = Path.Combine(path, "attendances.db");
+
+            connection = new SQLiteConnection(path);
             connection.CreateTable<T>();
+
         }
 
         public T Get(Expression<Func<T, bool>> expression)
@@ -28,11 +32,11 @@ namespace OpenShelter.Services
             }
         }
 
-        public IEnumerable<T> GetAll(Expression<Func<T, bool>> expression)
+        public List<T> GetAll(Expression<Func<T, bool>> expression)
         {
             try
             {
-                return connection.Table<T>().Where(expression);
+                return connection.Table<T>().Where(expression).ToList();
             }
             catch
             {
@@ -51,7 +55,5 @@ namespace OpenShelter.Services
                 return default;
             }
         }
-
-        public string DbPath { get { return Path.Combine(Environment.CurrentDirectory, "Db", "attendances.db"); } }
     }
 }
