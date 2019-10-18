@@ -1,0 +1,6 @@
+﻿language: csharp
+solution: open-shelter-app.sln
+install:
+  - nuget restore open-shelter-app.sln
+script:
+  - msbuild /p:Configuration=Release open-shelter-app.sln
