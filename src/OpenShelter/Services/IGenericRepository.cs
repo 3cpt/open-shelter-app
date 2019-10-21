@@ -7,6 +7,7 @@ namespace OpenShelter.Services
     public interface IGenericRepository<T> where T : new()
     {
         int Add(T entity);
+        int Update(T entity);
         T Get(Expression<Func<T, bool>> expression);
         List<T> GetAll(Expression<Func<T, bool>> expression);
     }

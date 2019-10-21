@@ -26,7 +26,7 @@ namespace OpenShelter.Services
             {
                 return connection.Table<T>().FirstOrDefault(expression);
             }
-            catch
+            catch (Exception x)
             {
                 return default;
             }
@@ -49,6 +49,18 @@ namespace OpenShelter.Services
             try
             {
                 return connection.Insert(entity);
+            }
+            catch
+            {
+                return default;
+            }
+        }
+
+        public int Update(T entity)
+        {
+            try
+            {
+                return connection.Update(entity);
             }
             catch
             {

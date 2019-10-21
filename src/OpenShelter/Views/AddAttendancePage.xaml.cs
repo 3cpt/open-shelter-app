@@ -65,13 +65,12 @@ namespace OpenShelter.Views
             {
                 this.attendanceRepository.Add(attendance);
                 await DisplayAlert("SUCESSO", $"Olá {volunter.Name}. Entrada registada com sucesso, os gatinhos agradecem!", "Ok");
+                await Navigation.PopAsync();
             }
             catch (Exception)
             {
                 await DisplayAlert("Aviso", "Aconteceu algo inesperado. Contacta quem fez a aplicação.", "Ok");
             }
-
-            await Navigation.PopAsync();
         }
     }
 }

@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="OpenShelter.Views.AdminLoginPage">
     <StackLayout>
-        <Label Text="Administração" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+        <Label Text="Administração" />
         <Entry x:Name="txtPassword" Placeholder="Enter Password"></Entry>
-        <Button Text="Admin Login" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Clicked="OnAdminLoginPageButtonClicked" />
+        <Button Text="Admin Login" Clicked="OnAdminLoginPageButtonClicked" />
     </StackLayout>
 </ContentPage>

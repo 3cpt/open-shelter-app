@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="OpenShelter.Views.ViewAttendancePage">
+    <StackLayout x:Name="mainStackLayout" Padding="10">
+        <Label x:Name="lblName" />
+
+        <Label x:Name="lblEnterTime" />
+
+        <Label x:Name="lblTaskType" />
+
+        <Label x:Name="lblId" IsVisible="false" />
+
+        <Button Text="Terminar" Clicked="OnEndAttendanceClick" />
+
+        <Button Text="Voltar" Clicked="OnBackClick" />
+    </StackLayout>
+</ContentPage>

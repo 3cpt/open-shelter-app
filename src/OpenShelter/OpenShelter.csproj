@@ -21,4 +21,7 @@
     <Folder Include="Services\" />
     <Folder Include="Views\Admin\" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="ViewModel\AttendanceViewModel.cs" />
+  </ItemGroup>
 </Project>

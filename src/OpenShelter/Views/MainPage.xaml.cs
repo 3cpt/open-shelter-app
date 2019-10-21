@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using OpenShelter.Models;
 using OpenShelter.Services;
@@ -14,16 +14,18 @@ namespace OpenShelter
         private readonly IVolunterRepository volunterRepository;
         private readonly IAttendanceRepository attendanceRepository;
 
-        public IList<Attendance> Attendances { get; private set; }
+        public ObservableCollection<Attendance> Attendances { get; set; }
+
 
         public MainPage()
         {
-            InitializeComponent();
-
             this.volunterRepository = DependencyService.Get<IVolunterRepository>();
             this.attendanceRepository = DependencyService.Get<IAttendanceRepository>();
+            InitializeComponent();
 
-            this.CheckStart();
+            //BindingContext = new AttendanceViewModel();
+
+            this.RefreshList();
         }
 
         async void OnAddAttendancePageButtonClicked(object sender, EventArgs e)
@@ -36,16 +38,29 @@ namespace OpenShelter
             await Navigation.PushAsync(new AdminLoginPage());
         }
 
-        private void CheckStart()
+        protected override void OnAppearing()
         {
-            Attendances = this.attendanceRepository.GetAll(a => a.ExitTime == default && a.EnterTime > DateTime.Now.AddHours(-12));
+            base.OnAppearing(); //call your Refersh method
 
-            EmployeeView.ItemsSource = Attendances;
+            this.RefreshList();
+        }
 
-            if (true)
-            {
-                volunterRepository.InsertDummyData();
-            }
+        private void RefreshList()
+        {
+            var attendances = this.attendanceRepository.GetAll(v => true);
+
+            Attendances = new ObservableCollection<Attendance>(attendances);
+
+            EmployeeView.ItemsSource = new ObservableCollection<Attendance>(attendances);
+        }
+
+        async void OnItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            var myListView = (ListView)sender;
+            var attendance = (Attendance)myListView.SelectedItem;
+
+            await Navigation.PushAsync(new ViewAttendancePage(attendance), true);
+
         }
     }
 }
