@@ -13,10 +13,11 @@ namespace OpenShelter.Views
 
         async void OnAdminLoginPageButtonClicked(object sender, EventArgs e)
         {
-            if (txtPassword.Text == DateTime.Now.ToString("yyyyMMdd"))
+            if (this.txtPassword.Text == DateTime.Now.ToString("yyyyMM"))
             {
-                await Navigation.PushAsync(new AdminMainPage());
+                this.txtPassword.Text = string.Empty;
 
+                await Navigation.PushAsync(new AdminMainPage());
             }
             else
             {

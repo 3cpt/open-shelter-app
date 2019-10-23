@@ -19,12 +19,22 @@ namespace OpenShelter.Models
 
         public string TaskType { get; set; }
 
+
         public string Banner
         {
 
             get
             {
-                return string.Format("{0} - {1} / {2}", TaskType, EnterTime, ExitTime != default ? ExitTime.ToString() : String.Empty);
+                return string.Format("{0} / {1}", Name, TaskType);
+            }
+        }
+
+        public string Description
+        {
+
+            get
+            {
+                return string.Format("{0} - {1}", EnterTime.ToString("HH:mm dd-MM-yyyy"), ExitTime != default ? ExitTime.ToString("HH:mm dd-MM-yyyy") : String.Empty);
             }
         }
     }

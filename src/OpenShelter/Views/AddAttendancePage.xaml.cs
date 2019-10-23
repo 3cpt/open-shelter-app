@@ -30,7 +30,6 @@ namespace OpenShelter.Views
                 await DisplayAlert("Aviso", "Indique a palavra-chave", "Ok");
                 return;
             }
-            var volunteers = this.volunterRepository.GetAll(v => true);
 
             var volunter = this.volunterRepository.Get(v => v.Username == this.txtUsername.Text.ToLower());
 

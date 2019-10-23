@@ -12,7 +12,7 @@ namespace OpenShelter.Services
 
         protected GenericRepository()
         {
-            var path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+            var path = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
             path = Path.Combine(path, "attendances.db");
 
             connection = new SQLiteConnection(path);
@@ -26,7 +26,7 @@ namespace OpenShelter.Services
             {
                 return connection.Table<T>().FirstOrDefault(expression);
             }
-            catch (Exception x)
+            catch
             {
                 return default;
             }

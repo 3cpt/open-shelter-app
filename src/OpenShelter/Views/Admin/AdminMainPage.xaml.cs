@@ -14,7 +14,7 @@ namespace OpenShelter.Views.Admin
 
         async void OnManageVolunteersPageButtonClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new AdminMainPage());
+            await Navigation.PushAsync(new AdminVolunteersPage());
         }
 
         async void OnDownloadPageButtonClicked(object sender, EventArgs e)

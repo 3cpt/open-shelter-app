@@ -23,8 +23,6 @@ namespace OpenShelter
             this.attendanceRepository = DependencyService.Get<IAttendanceRepository>();
             InitializeComponent();
 
-            //BindingContext = new AttendanceViewModel();
-
             this.RefreshList();
         }
 
@@ -60,7 +58,6 @@ namespace OpenShelter
             var attendance = (Attendance)myListView.SelectedItem;
 
             await Navigation.PushAsync(new ViewAttendancePage(attendance), true);
-
         }
     }
 }
