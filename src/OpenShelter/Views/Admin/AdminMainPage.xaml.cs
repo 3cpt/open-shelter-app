@@ -11,5 +11,15 @@ namespace OpenShelter.Views.Admin
         {
             InitializeComponent();
         }
+
+        async void OnManageVolunteersPageButtonClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new AdminMainPage());
+        }
+
+        async void OnDownloadPageButtonClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new AdminMainPage());
+        }
     }
 }

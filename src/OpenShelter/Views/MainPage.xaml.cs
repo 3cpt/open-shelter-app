@@ -51,7 +51,7 @@ namespace OpenShelter
 
             Attendances = new ObservableCollection<Attendance>(attendances);
 
-            EmployeeView.ItemsSource = new ObservableCollection<Attendance>(attendances);
+            this.lvAttendances.ItemsSource = new ObservableCollection<Attendance>(attendances);
         }
 
         async void OnItemTapped(object sender, ItemTappedEventArgs e)

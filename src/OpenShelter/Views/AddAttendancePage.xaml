@@ -3,7 +3,7 @@
     <StackLayout x:Name="mainStackLayout" Padding="10">
         <Entry x:Name="txtUsername" Placeholder="Utilizador" />
 
-        <Entry x:Name="txtPassword" Keyboard="Numeric" Placeholder="Palavra-chave" />
+        <Entry x:Name="txtPassword" Keyboard="Numeric" IsPassword="True" Placeholder="Palavra-chave" />
 
         <Picker x:Name="pickerTaskType" Title="Selecione um tipo de tarefa">
             <Picker.Items>
