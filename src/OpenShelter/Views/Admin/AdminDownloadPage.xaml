@@ -1,5 +1,26 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="OpenShelter.Views.Admin.AdminDownloadPage">
-    <ContentPage.Content>
-    </ContentPage.Content>
+    <StackLayout Padding="10">
+
+        <Entry x:Name="txtYear" Keyboard="Numeric" Placeholder="Ano" />
+
+        <Picker x:Name="pickerMonth" Title="Selecione o mês">
+            <Picker.Items>
+                <x:String>1</x:String>
+                <x:String>2</x:String>
+                <x:String>3</x:String>
+                <x:String>4</x:String>
+                <x:String>5</x:String>
+                <x:String>6</x:String>
+                <x:String>7</x:String>
+                <x:String>8</x:String>
+                <x:String>9</x:String>
+                <x:String>10</x:String>
+                <x:String>11</x:String>
+                <x:String>12</x:String>
+            </Picker.Items>
+        </Picker>
+
+        <Button Text="Partilhar" Clicked="OnShareClick" />
+    </StackLayout>
 </ContentPage>

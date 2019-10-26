@@ -52,6 +52,7 @@ namespace OpenShelter.Views
                 await DisplayAlert("Aviso", "Selecione o tipo de tarefa", "Ok");
                 return;
             }
+
             var attendance = new Attendance
             {
                 EnterTime = DateTime.Now,
