@@ -48,7 +48,6 @@ namespace OpenShelter.Views.Admin
                 a.EnterTime.Date.Month == Convert.ToInt32(this.pickerMonth.SelectedItem) &&
                 a.EnterTime.Date.Year == Convert.ToInt32(this.txtYear.Text));
 
-
             if (attendances == null || attendances.Count == 0)
             {
                 await DisplayAlert("Aviso", "Sem dados para esse mês", "Ok");
@@ -58,13 +57,12 @@ namespace OpenShelter.Views.Admin
 
             var fn = string.Format("Attendances-{0}-{1}-{2}.{3}", txtYear.Text, pickerMonth.SelectedItem.ToString(), DateTime.Now.ToString("yyyyMMddHHmmss"), "csv");
             var path = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+            var file = Path.Combine(FileSystem.CacheDirectory, fn);
 
-            using (var streamWriter = new StreamWriter(fn, true))
+            using (var streamWriter = new StreamWriter(file, true))
             {
                 streamWriter.Write(GetCsv(attendances));
             }
-
-            var file = Path.Combine(FileSystem.CacheDirectory, fn);
 
             await Share.RequestAsync(new ShareFileRequest
             {
@@ -79,7 +77,7 @@ namespace OpenShelter.Views.Admin
         {
             StringBuilder sb = new StringBuilder();
 
-            sb.Append("Nome,Tarefa,Entrada,Saída");
+            sb.Append("Nome,Tarefa,Entrada,Saida");
             sb.AppendLine();
 
             foreach (var attendance in attendances)
@@ -88,8 +86,8 @@ namespace OpenShelter.Views.Admin
                     "{0},{1},{2},{3}",
                     attendance.Name,
                     attendance.TaskType,
-                    attendance.EnterTime.ToString("HH:mm dd-MM-yyyy"),
-                    attendance.ExitTime.ToString("HH:mm dd-MM-yyyy"));
+                    attendance.EnterTime.ToString("dd-MM-yyyy HH:mm"),
+                    attendance.ExitTime == default ? string.Empty : attendance.ExitTime.ToString("dd-MM-yyyy HH:mm"));
 
                 sb.AppendLine();
             }

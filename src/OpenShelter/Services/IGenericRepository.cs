@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq.Expressions;
 
 namespace OpenShelter.Services
 {
@@ -8,7 +7,7 @@ namespace OpenShelter.Services
     {
         int Add(T entity);
         int Update(T entity);
-        T Get(Expression<Func<T, bool>> expression);
+        T Get(Func<T, bool> expression);
         List<T> GetAll(Func<T, bool> expression);
     }
 }

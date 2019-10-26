@@ -18,10 +18,9 @@ namespace OpenShelter.Services
 
             connection = new SQLiteConnection(path);
             connection.CreateTable<T>();
-
         }
 
-        public T Get(Expression<Func<T, bool>> expression)
+        public T Get(Func<T, bool> expression)
         {
             try
             {
@@ -39,7 +38,7 @@ namespace OpenShelter.Services
             {
                 return connection.Table<T>().Where(expression).ToList();
             }
-            catch (Exception e)
+            catch
             {
                 return default;
             }

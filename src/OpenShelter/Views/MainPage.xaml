@@ -2,14 +2,33 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:OpenShelter" x:Class="OpenShelter.MainPage" Title="Presenças">
     <StackLayout>
 
+        <Label Text="Entradas de Hoje" />
+
         <ListView x:Name="lvAttendances" ItemTapped="OnItemTapped">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
                         <StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
                             <StackLayout Orientation="Vertical">
-                                <Label Text="{Binding Name}" FontAttributes="Bold" />
-                                <Label Text="{Binding Banner}" />
+                                <Label Text="{Binding Banner}" FontAttributes="Bold" />
+                                <Label Text="{Binding Description}" />
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Label Text="Saídas de Hoje" />
+
+        <ListView x:Name="lvAttendancesExit">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
+                            <StackLayout Orientation="Vertical">
+                                <Label Text="{Binding Banner}" FontAttributes="Bold" />
+                                <Label Text="{Binding Description}" />
                             </StackLayout>
                         </StackLayout>
                     </ViewCell>

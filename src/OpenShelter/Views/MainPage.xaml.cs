@@ -11,19 +11,13 @@ namespace OpenShelter
     [DesignTimeVisible(true)]
     public partial class MainPage : ContentPage
     {
-        private readonly IVolunterRepository volunterRepository;
         private readonly IAttendanceRepository attendanceRepository;
-
-        public ObservableCollection<Attendance> Attendances { get; set; }
-
 
         public MainPage()
         {
-            this.volunterRepository = DependencyService.Get<IVolunterRepository>();
-            this.attendanceRepository = DependencyService.Get<IAttendanceRepository>();
             InitializeComponent();
 
-            this.RefreshList();
+            this.attendanceRepository = DependencyService.Get<IAttendanceRepository>();
         }
 
         async void OnAddAttendancePageButtonClicked(object sender, EventArgs e)
@@ -38,18 +32,29 @@ namespace OpenShelter
 
         protected override void OnAppearing()
         {
-            base.OnAppearing(); //call your Refersh method
+            base.OnAppearing();
 
             this.RefreshList();
+
+            this.RefreshListExit();
         }
 
         private void RefreshList()
         {
-            var attendances = this.attendanceRepository.GetAll(v => true);
+            var dt = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, 2, 59, 59);
 
-            Attendances = new ObservableCollection<Attendance>(attendances);
+            var attendances = this.attendanceRepository.GetAll(v => v.EnterTime >= dt && v.ExitTime == default);
 
             this.lvAttendances.ItemsSource = new ObservableCollection<Attendance>(attendances);
+        }
+
+        private void RefreshListExit()
+        {
+            var dt = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, 2, 59, 59);
+
+            var exits = this.attendanceRepository.GetAll(v => v.ExitTime != default && v.ExitTime >= dt);
+
+            this.lvAttendancesExit.ItemsSource = new ObservableCollection<Attendance>(exits);
         }
 
         async void OnItemTapped(object sender, ItemTappedEventArgs e)

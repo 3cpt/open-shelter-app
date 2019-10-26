@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using OpenShelter.Models;
 using OpenShelter.Services;
 using Xamarin.Forms;
@@ -31,7 +30,8 @@ namespace OpenShelter.Views.Admin
             }
             else
             {
-                this.btnRemove.IsEnabled = !this.IsNewVolunter;
+                this.cbActive.IsChecked = this.IsNewVolunter;
+                //this.btnRemove.IsEnabled = !this.IsNewVolunter;
             }
         }
 

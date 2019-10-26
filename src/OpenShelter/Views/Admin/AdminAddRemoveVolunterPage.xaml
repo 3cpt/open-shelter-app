@@ -12,6 +12,6 @@
 
         <Button Text="Adicionar Voluntário" Clicked="OnAddVolunterClick" />
 
-        <Button x:Name="btnRemove" Text="Remover Voluntário" Clicked="OnRemoveVolunterClick" />
+        <!--<Button x:Name="btnRemove" Text="Remover Voluntário" Clicked="OnRemoveVolunterClick" />-->
     </StackLayout>
 </ContentPage>

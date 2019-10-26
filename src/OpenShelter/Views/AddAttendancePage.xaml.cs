@@ -39,6 +39,12 @@ namespace OpenShelter.Views
                 return;
             }
 
+            if (!volunter.Visible)
+            {
+                await DisplayAlert("Aviso", "Utilizador inativo", "Ok");
+                return;
+            }
+
             if (volunter.AccessCode.ToString() != this.txtPassword.Text)
             {
                 await DisplayAlert("Aviso", "Palavra-chave errada", "Ok");
