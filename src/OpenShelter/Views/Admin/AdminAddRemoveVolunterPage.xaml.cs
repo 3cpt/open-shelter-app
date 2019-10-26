@@ -24,6 +24,7 @@ namespace OpenShelter.Views.Admin
                 this.txtName.Text = volunter.Name;
                 this.txtPassword.Text = volunter.AccessCode.ToString();
                 this.txtUsername.Text = volunter.Username;
+                this.cbActive.IsChecked = volunter.Visible;
 
                 this.txtUsername.IsEnabled = !this.IsNewVolunter;
                 this.txtName.IsEnabled = !this.IsNewVolunter;

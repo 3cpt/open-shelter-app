@@ -48,15 +48,29 @@ namespace OpenShelter.Views.Admin
                 a.EnterTime.Date.Month == Convert.ToInt32(this.pickerMonth.SelectedItem) &&
                 a.EnterTime.Date.Year == Convert.ToInt32(this.txtYear.Text));
 
-            var fn = "Attachment.txt";
+
+            if (attendances == null || attendances.Count == 0)
+            {
+                await DisplayAlert("Aviso", "Sem dados para esse mês", "Ok");
+
+                return;
+            }
+
+            var fn = string.Format("Attendances-{0}-{1}-{2}.{3}", txtYear.Text, pickerMonth.SelectedItem.ToString(), DateTime.Now.ToString("yyyyMMddHHmmss"), "csv");
             var path = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+
+            using (var streamWriter = new StreamWriter(fn, true))
+            {
+                streamWriter.Write(GetCsv(attendances));
+            }
+
             var file = Path.Combine(FileSystem.CacheDirectory, fn);
 
-            //await Share.RequestAsync(new ShareFileRequest
-            //{
-            //    Title = Title,
-            //    File = new ShareFile(file)
-            //});
+            await Share.RequestAsync(new ShareFileRequest
+            {
+                Title = Title,
+                File = new ShareFile(file),
+            });
 
             await Navigation.PopAsync();
         }

@@ -9,7 +9,7 @@
                         <StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
                             <StackLayout Orientation="Vertical">
                                 <Label Text="{Binding Name}" FontAttributes="Bold" />
-                                <Label Text="{Binding Username}" />
+                                <Label Text="{Binding Banner}" />
                             </StackLayout>
                         </StackLayout>
                     </ViewCell>

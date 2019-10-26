@@ -26,6 +26,108 @@ namespace OpenShelter.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::Xamarin.Essentials.Resource.Attribute.font = global::OpenShelter.Droid.Resource.Attribute.font;
+			global::Xamarin.Essentials.Resource.Attribute.fontProviderAuthority = global::OpenShelter.Droid.Resource.Attribute.fontProviderAuthority;
+			global::Xamarin.Essentials.Resource.Attribute.fontProviderCerts = global::OpenShelter.Droid.Resource.Attribute.fontProviderCerts;
+			global::Xamarin.Essentials.Resource.Attribute.fontProviderFetchStrategy = global::OpenShelter.Droid.Resource.Attribute.fontProviderFetchStrategy;
+			global::Xamarin.Essentials.Resource.Attribute.fontProviderFetchTimeout = global::OpenShelter.Droid.Resource.Attribute.fontProviderFetchTimeout;
+			global::Xamarin.Essentials.Resource.Attribute.fontProviderPackage = global::OpenShelter.Droid.Resource.Attribute.fontProviderPackage;
+			global::Xamarin.Essentials.Resource.Attribute.fontProviderQuery = global::OpenShelter.Droid.Resource.Attribute.fontProviderQuery;
+			global::Xamarin.Essentials.Resource.Attribute.fontStyle = global::OpenShelter.Droid.Resource.Attribute.fontStyle;
+			global::Xamarin.Essentials.Resource.Attribute.fontWeight = global::OpenShelter.Droid.Resource.Attribute.fontWeight;
+			global::Xamarin.Essentials.Resource.Boolean.abc_action_bar_embed_tabs = global::OpenShelter.Droid.Resource.Boolean.abc_action_bar_embed_tabs;
+			global::Xamarin.Essentials.Resource.Color.notification_action_color_filter = global::OpenShelter.Droid.Resource.Color.notification_action_color_filter;
+			global::Xamarin.Essentials.Resource.Color.notification_icon_bg_color = global::OpenShelter.Droid.Resource.Color.notification_icon_bg_color;
+			global::Xamarin.Essentials.Resource.Color.ripple_material_light = global::OpenShelter.Droid.Resource.Color.ripple_material_light;
+			global::Xamarin.Essentials.Resource.Color.secondary_text_default_material_light = global::OpenShelter.Droid.Resource.Color.secondary_text_default_material_light;
+			global::Xamarin.Essentials.Resource.Dimension.compat_button_inset_horizontal_material = global::OpenShelter.Droid.Resource.Dimension.compat_button_inset_horizontal_material;
+			global::Xamarin.Essentials.Resource.Dimension.compat_button_inset_vertical_material = global::OpenShelter.Droid.Resource.Dimension.compat_button_inset_vertical_material;
+			global::Xamarin.Essentials.Resource.Dimension.compat_button_padding_horizontal_material = global::OpenShelter.Droid.Resource.Dimension.compat_button_padding_horizontal_material;
+			global::Xamarin.Essentials.Resource.Dimension.compat_button_padding_vertical_material = global::OpenShelter.Droid.Resource.Dimension.compat_button_padding_vertical_material;
+			global::Xamarin.Essentials.Resource.Dimension.compat_control_corner_material = global::OpenShelter.Droid.Resource.Dimension.compat_control_corner_material;
+			global::Xamarin.Essentials.Resource.Dimension.notification_action_icon_size = global::OpenShelter.Droid.Resource.Dimension.notification_action_icon_size;
+			global::Xamarin.Essentials.Resource.Dimension.notification_action_text_size = global::OpenShelter.Droid.Resource.Dimension.notification_action_text_size;
+			global::Xamarin.Essentials.Resource.Dimension.notification_big_circle_margin = global::OpenShelter.Droid.Resource.Dimension.notification_big_circle_margin;
+			global::Xamarin.Essentials.Resource.Dimension.notification_content_margin_start = global::OpenShelter.Droid.Resource.Dimension.notification_content_margin_start;
+			global::Xamarin.Essentials.Resource.Dimension.notification_large_icon_height = global::OpenShelter.Droid.Resource.Dimension.notification_large_icon_height;
+			global::Xamarin.Essentials.Resource.Dimension.notification_large_icon_width = global::OpenShelter.Droid.Resource.Dimension.notification_large_icon_width;
+			global::Xamarin.Essentials.Resource.Dimension.notification_main_column_padding_top = global::OpenShelter.Droid.Resource.Dimension.notification_main_column_padding_top;
+			global::Xamarin.Essentials.Resource.Dimension.notification_media_narrow_margin = global::OpenShelter.Droid.Resource.Dimension.notification_media_narrow_margin;
+			global::Xamarin.Essentials.Resource.Dimension.notification_right_icon_size = global::OpenShelter.Droid.Resource.Dimension.notification_right_icon_size;
+			global::Xamarin.Essentials.Resource.Dimension.notification_right_side_padding_top = global::OpenShelter.Droid.Resource.Dimension.notification_right_side_padding_top;
+			global::Xamarin.Essentials.Resource.Dimension.notification_small_icon_background_padding = global::OpenShelter.Droid.Resource.Dimension.notification_small_icon_background_padding;
+			global::Xamarin.Essentials.Resource.Dimension.notification_small_icon_size_as_large = global::OpenShelter.Droid.Resource.Dimension.notification_small_icon_size_as_large;
+			global::Xamarin.Essentials.Resource.Dimension.notification_subtext_size = global::OpenShelter.Droid.Resource.Dimension.notification_subtext_size;
+			global::Xamarin.Essentials.Resource.Dimension.notification_top_pad = global::OpenShelter.Droid.Resource.Dimension.notification_top_pad;
+			global::Xamarin.Essentials.Resource.Dimension.notification_top_pad_large_text = global::OpenShelter.Droid.Resource.Dimension.notification_top_pad_large_text;
+			global::Xamarin.Essentials.Resource.Drawable.notification_action_background = global::OpenShelter.Droid.Resource.Drawable.notification_action_background;
+			global::Xamarin.Essentials.Resource.Drawable.notification_bg = global::OpenShelter.Droid.Resource.Drawable.notification_bg;
+			global::Xamarin.Essentials.Resource.Drawable.notification_bg_low = global::OpenShelter.Droid.Resource.Drawable.notification_bg_low;
+			global::Xamarin.Essentials.Resource.Drawable.notification_bg_low_normal = global::OpenShelter.Droid.Resource.Drawable.notification_bg_low_normal;
+			global::Xamarin.Essentials.Resource.Drawable.notification_bg_low_pressed = global::OpenShelter.Droid.Resource.Drawable.notification_bg_low_pressed;
+			global::Xamarin.Essentials.Resource.Drawable.notification_bg_normal = global::OpenShelter.Droid.Resource.Drawable.notification_bg_normal;
+			global::Xamarin.Essentials.Resource.Drawable.notification_bg_normal_pressed = global::OpenShelter.Droid.Resource.Drawable.notification_bg_normal_pressed;
+			global::Xamarin.Essentials.Resource.Drawable.notification_icon_background = global::OpenShelter.Droid.Resource.Drawable.notification_icon_background;
+			global::Xamarin.Essentials.Resource.Drawable.notification_template_icon_bg = global::OpenShelter.Droid.Resource.Drawable.notification_template_icon_bg;
+			global::Xamarin.Essentials.Resource.Drawable.notification_template_icon_low_bg = global::OpenShelter.Droid.Resource.Drawable.notification_template_icon_low_bg;
+			global::Xamarin.Essentials.Resource.Drawable.notification_tile_bg = global::OpenShelter.Droid.Resource.Drawable.notification_tile_bg;
+			global::Xamarin.Essentials.Resource.Drawable.notify_panel_notification_icon_bg = global::OpenShelter.Droid.Resource.Drawable.notify_panel_notification_icon_bg;
+			global::Xamarin.Essentials.Resource.Id.action_container = global::OpenShelter.Droid.Resource.Id.action_container;
+			global::Xamarin.Essentials.Resource.Id.action_divider = global::OpenShelter.Droid.Resource.Id.action_divider;
+			global::Xamarin.Essentials.Resource.Id.action_image = global::OpenShelter.Droid.Resource.Id.action_image;
+			global::Xamarin.Essentials.Resource.Id.action_text = global::OpenShelter.Droid.Resource.Id.action_text;
+			global::Xamarin.Essentials.Resource.Id.actions = global::OpenShelter.Droid.Resource.Id.actions;
+			global::Xamarin.Essentials.Resource.Id.async = global::OpenShelter.Droid.Resource.Id.async;
+			global::Xamarin.Essentials.Resource.Id.blocking = global::OpenShelter.Droid.Resource.Id.blocking;
+			global::Xamarin.Essentials.Resource.Id.chronometer = global::OpenShelter.Droid.Resource.Id.chronometer;
+			global::Xamarin.Essentials.Resource.Id.forever = global::OpenShelter.Droid.Resource.Id.forever;
+			global::Xamarin.Essentials.Resource.Id.icon = global::OpenShelter.Droid.Resource.Id.icon;
+			global::Xamarin.Essentials.Resource.Id.icon_group = global::OpenShelter.Droid.Resource.Id.icon_group;
+			global::Xamarin.Essentials.Resource.Id.info = global::OpenShelter.Droid.Resource.Id.info;
+			global::Xamarin.Essentials.Resource.Id.italic = global::OpenShelter.Droid.Resource.Id.italic;
+			global::Xamarin.Essentials.Resource.Id.line1 = global::OpenShelter.Droid.Resource.Id.line1;
+			global::Xamarin.Essentials.Resource.Id.line3 = global::OpenShelter.Droid.Resource.Id.line3;
+			global::Xamarin.Essentials.Resource.Id.normal = global::OpenShelter.Droid.Resource.Id.normal;
+			global::Xamarin.Essentials.Resource.Id.notification_background = global::OpenShelter.Droid.Resource.Id.notification_background;
+			global::Xamarin.Essentials.Resource.Id.notification_main_column = global::OpenShelter.Droid.Resource.Id.notification_main_column;
+			global::Xamarin.Essentials.Resource.Id.notification_main_column_container = global::OpenShelter.Droid.Resource.Id.notification_main_column_container;
+			global::Xamarin.Essentials.Resource.Id.right_icon = global::OpenShelter.Droid.Resource.Id.right_icon;
+			global::Xamarin.Essentials.Resource.Id.right_side = global::OpenShelter.Droid.Resource.Id.right_side;
+			global::Xamarin.Essentials.Resource.Id.tag_transition_group = global::OpenShelter.Droid.Resource.Id.tag_transition_group;
+			global::Xamarin.Essentials.Resource.Id.text = global::OpenShelter.Droid.Resource.Id.text;
+			global::Xamarin.Essentials.Resource.Id.text2 = global::OpenShelter.Droid.Resource.Id.text2;
+			global::Xamarin.Essentials.Resource.Id.time = global::OpenShelter.Droid.Resource.Id.time;
+			global::Xamarin.Essentials.Resource.Id.title = global::OpenShelter.Droid.Resource.Id.title;
+			global::Xamarin.Essentials.Resource.Integer.status_bar_notification_info_maxnum = global::OpenShelter.Droid.Resource.Integer.status_bar_notification_info_maxnum;
+			global::Xamarin.Essentials.Resource.Layout.notification_action = global::OpenShelter.Droid.Resource.Layout.notification_action;
+			global::Xamarin.Essentials.Resource.Layout.notification_action_tombstone = global::OpenShelter.Droid.Resource.Layout.notification_action_tombstone;
+			global::Xamarin.Essentials.Resource.Layout.notification_template_custom_big = global::OpenShelter.Droid.Resource.Layout.notification_template_custom_big;
+			global::Xamarin.Essentials.Resource.Layout.notification_template_icon_group = global::OpenShelter.Droid.Resource.Layout.notification_template_icon_group;
+			global::Xamarin.Essentials.Resource.Layout.notification_template_part_chronometer = global::OpenShelter.Droid.Resource.Layout.notification_template_part_chronometer;
+			global::Xamarin.Essentials.Resource.Layout.notification_template_part_time = global::OpenShelter.Droid.Resource.Layout.notification_template_part_time;
+			global::Xamarin.Essentials.Resource.String.status_bar_notification_info_overflow = global::OpenShelter.Droid.Resource.String.status_bar_notification_info_overflow;
+			global::Xamarin.Essentials.Resource.Style.TextAppearance_Compat_Notification = global::OpenShelter.Droid.Resource.Style.TextAppearance_Compat_Notification;
+			global::Xamarin.Essentials.Resource.Style.TextAppearance_Compat_Notification_Info = global::OpenShelter.Droid.Resource.Style.TextAppearance_Compat_Notification_Info;
+			global::Xamarin.Essentials.Resource.Style.TextAppearance_Compat_Notification_Line2 = global::OpenShelter.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2;
+			global::Xamarin.Essentials.Resource.Style.TextAppearance_Compat_Notification_Time = global::OpenShelter.Droid.Resource.Style.TextAppearance_Compat_Notification_Time;
+			global::Xamarin.Essentials.Resource.Style.TextAppearance_Compat_Notification_Title = global::OpenShelter.Droid.Resource.Style.TextAppearance_Compat_Notification_Title;
+			global::Xamarin.Essentials.Resource.Style.Widget_Compat_NotificationActionContainer = global::OpenShelter.Droid.Resource.Style.Widget_Compat_NotificationActionContainer;
+			global::Xamarin.Essentials.Resource.Style.Widget_Compat_NotificationActionText = global::OpenShelter.Droid.Resource.Style.Widget_Compat_NotificationActionText;
+			global::Xamarin.Essentials.Resource.Xml.xamarin_essentials_fileprovider_file_paths = global::OpenShelter.Droid.Resource.Xml.xamarin_essentials_fileprovider_file_paths;
+			global::Xamarin.Essentials.Resource.Styleable.FontFamily = global::OpenShelter.Droid.Resource.Styleable.FontFamily;
+			global::Xamarin.Essentials.Resource.Styleable.FontFamily_fontProviderAuthority = global::OpenShelter.Droid.Resource.Styleable.FontFamily_fontProviderAuthority;
+			global::Xamarin.Essentials.Resource.Styleable.FontFamily_fontProviderCerts = global::OpenShelter.Droid.Resource.Styleable.FontFamily_fontProviderCerts;
+			global::Xamarin.Essentials.Resource.Styleable.FontFamily_fontProviderFetchStrategy = global::OpenShelter.Droid.Resource.Styleable.FontFamily_fontProviderFetchStrategy;
+			global::Xamarin.Essentials.Resource.Styleable.FontFamily_fontProviderFetchTimeout = global::OpenShelter.Droid.Resource.Styleable.FontFamily_fontProviderFetchTimeout;
+			global::Xamarin.Essentials.Resource.Styleable.FontFamily_fontProviderPackage = global::OpenShelter.Droid.Resource.Styleable.FontFamily_fontProviderPackage;
+			global::Xamarin.Essentials.Resource.Styleable.FontFamily_fontProviderQuery = global::OpenShelter.Droid.Resource.Styleable.FontFamily_fontProviderQuery;
+			global::Xamarin.Essentials.Resource.Styleable.FontFamilyFont = global::OpenShelter.Droid.Resource.Styleable.FontFamilyFont;
+			global::Xamarin.Essentials.Resource.Styleable.FontFamilyFont_android_font = global::OpenShelter.Droid.Resource.Styleable.FontFamilyFont_android_font;
+			global::Xamarin.Essentials.Resource.Styleable.FontFamilyFont_android_fontStyle = global::OpenShelter.Droid.Resource.Styleable.FontFamilyFont_android_fontStyle;
+			global::Xamarin.Essentials.Resource.Styleable.FontFamilyFont_android_fontWeight = global::OpenShelter.Droid.Resource.Styleable.FontFamilyFont_android_fontWeight;
+			global::Xamarin.Essentials.Resource.Styleable.FontFamilyFont_font = global::OpenShelter.Droid.Resource.Styleable.FontFamilyFont_font;
+			global::Xamarin.Essentials.Resource.Styleable.FontFamilyFont_fontStyle = global::OpenShelter.Droid.Resource.Styleable.FontFamilyFont_fontStyle;
+			global::Xamarin.Essentials.Resource.Styleable.FontFamilyFont_fontWeight = global::OpenShelter.Droid.Resource.Styleable.FontFamilyFont_fontWeight;
 			global::Xamarin.Forms.Platform.Android.Resource.Animation.abc_fade_in = global::OpenShelter.Droid.Resource.Animation.abc_fade_in;
 			global::Xamarin.Forms.Platform.Android.Resource.Animation.abc_fade_out = global::OpenShelter.Droid.Resource.Animation.abc_fade_out;
 			global::Xamarin.Forms.Platform.Android.Resource.Animation.abc_grow_fade_in_from_bottom = global::OpenShelter.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
@@ -864,9 +966,9 @@ namespace OpenShelter.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Id.listMode = global::OpenShelter.Droid.Resource.Id.listMode;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.list_item = global::OpenShelter.Droid.Resource.Id.list_item;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.main_appbar = global::OpenShelter.Droid.Resource.Id.main_appbar;
-			global::Xamarin.Forms.Platform.Android.Resource.Id.main_scrollview = global::OpenShelter.Droid.Resource.Id.main_scrollview;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.main_tablayout = global::OpenShelter.Droid.Resource.Id.main_tablayout;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.main_toolbar = global::OpenShelter.Droid.Resource.Id.main_toolbar;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.main_viewpager = global::OpenShelter.Droid.Resource.Id.main_viewpager;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.masked = global::OpenShelter.Droid.Resource.Id.masked;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.media_actions = global::OpenShelter.Droid.Resource.Id.media_actions;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.message = global::OpenShelter.Droid.Resource.Id.message;
@@ -911,7 +1013,6 @@ namespace OpenShelter.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Id.search_voice_btn = global::OpenShelter.Droid.Resource.Id.search_voice_btn;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.select_dialog_listview = global::OpenShelter.Droid.Resource.Id.select_dialog_listview;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.shellcontent_appbar = global::OpenShelter.Droid.Resource.Id.shellcontent_appbar;
-			global::Xamarin.Forms.Platform.Android.Resource.Id.shellcontent_scrollview = global::OpenShelter.Droid.Resource.Id.shellcontent_scrollview;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.shellcontent_toolbar = global::OpenShelter.Droid.Resource.Id.shellcontent_toolbar;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.shortcut = global::OpenShelter.Droid.Resource.Id.shortcut;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.showCustom = global::OpenShelter.Droid.Resource.Id.showCustom;
@@ -1459,6 +1560,7 @@ namespace OpenShelter.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Style.Widget_Design_Snackbar = global::OpenShelter.Droid.Resource.Style.Widget_Design_Snackbar;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.Widget_Design_TabLayout = global::OpenShelter.Droid.Resource.Style.Widget_Design_TabLayout;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.Widget_Design_TextInputLayout = global::OpenShelter.Droid.Resource.Style.Widget_Design_TextInputLayout;
+			global::Xamarin.Forms.Platform.Android.Resource.Style.collectionViewStyle = global::OpenShelter.Droid.Resource.Style.collectionViewStyle;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.ActionBar = global::OpenShelter.Droid.Resource.Styleable.ActionBar;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.ActionBar_background = global::OpenShelter.Droid.Resource.Styleable.ActionBar_background;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.ActionBar_backgroundSplit = global::OpenShelter.Droid.Resource.Styleable.ActionBar_backgroundSplit;
@@ -5277,13 +5379,13 @@ namespace OpenShelter.Droid
 			public const int main_appbar = 2131230811;
 			
 			// aapt resource value: 0x7F08005C
-			public const int main_scrollview = 2131230812;
+			public const int main_tablayout = 2131230812;
 			
 			// aapt resource value: 0x7F08005D
-			public const int main_tablayout = 2131230813;
+			public const int main_toolbar = 2131230813;
 			
 			// aapt resource value: 0x7F08005E
-			public const int main_toolbar = 2131230814;
+			public const int main_viewpager = 2131230814;
 			
 			// aapt resource value: 0x7F08005F
 			public const int masked = 2131230815;
@@ -5496,160 +5598,157 @@ namespace OpenShelter.Droid
 			public const int shellcontent_appbar = 2131230883;
 			
 			// aapt resource value: 0x7F0800A4
-			public const int shellcontent_scrollview = 2131230884;
-			
-			// aapt resource value: 0x7F0800A5
-			public const int shellcontent_toolbar = 2131230885;
+			public const int shellcontent_toolbar = 2131230884;
 			
 			// aapt resource value: 0x7F080004
 			public const int SHIFT = 2131230724;
 			
+			// aapt resource value: 0x7F0800A5
+			public const int shortcut = 2131230885;
+			
 			// aapt resource value: 0x7F0800A6
-			public const int shortcut = 2131230886;
+			public const int showCustom = 2131230886;
 			
 			// aapt resource value: 0x7F0800A7
-			public const int showCustom = 2131230887;
+			public const int showHome = 2131230887;
 			
 			// aapt resource value: 0x7F0800A8
-			public const int showHome = 2131230888;
+			public const int showTitle = 2131230888;
 			
 			// aapt resource value: 0x7F0800A9
-			public const int showTitle = 2131230889;
+			public const int sliding_tabs = 2131230889;
 			
 			// aapt resource value: 0x7F0800AA
-			public const int sliding_tabs = 2131230890;
+			public const int smallLabel = 2131230890;
 			
 			// aapt resource value: 0x7F0800AB
-			public const int smallLabel = 2131230891;
+			public const int snackbar_action = 2131230891;
 			
 			// aapt resource value: 0x7F0800AC
-			public const int snackbar_action = 2131230892;
+			public const int snackbar_text = 2131230892;
 			
 			// aapt resource value: 0x7F0800AD
-			public const int snackbar_text = 2131230893;
+			public const int snap = 2131230893;
 			
 			// aapt resource value: 0x7F0800AE
-			public const int snap = 2131230894;
+			public const int spacer = 2131230894;
 			
 			// aapt resource value: 0x7F0800AF
-			public const int spacer = 2131230895;
+			public const int split_action_bar = 2131230895;
 			
 			// aapt resource value: 0x7F0800B0
-			public const int split_action_bar = 2131230896;
+			public const int src_atop = 2131230896;
 			
 			// aapt resource value: 0x7F0800B1
-			public const int src_atop = 2131230897;
+			public const int src_in = 2131230897;
 			
 			// aapt resource value: 0x7F0800B2
-			public const int src_in = 2131230898;
+			public const int src_over = 2131230898;
 			
 			// aapt resource value: 0x7F0800B3
-			public const int src_over = 2131230899;
+			public const int start = 2131230899;
 			
 			// aapt resource value: 0x7F0800B4
-			public const int start = 2131230900;
+			public const int status_bar_latest_event_content = 2131230900;
 			
 			// aapt resource value: 0x7F0800B5
-			public const int status_bar_latest_event_content = 2131230901;
+			public const int submenuarrow = 2131230901;
 			
 			// aapt resource value: 0x7F0800B6
-			public const int submenuarrow = 2131230902;
-			
-			// aapt resource value: 0x7F0800B7
-			public const int submit_area = 2131230903;
+			public const int submit_area = 2131230902;
 			
 			// aapt resource value: 0x7F080005
 			public const int SYM = 2131230725;
 			
+			// aapt resource value: 0x7F0800B7
+			public const int tabMode = 2131230903;
+			
 			// aapt resource value: 0x7F0800B8
-			public const int tabMode = 2131230904;
+			public const int tag_transition_group = 2131230904;
 			
 			// aapt resource value: 0x7F0800B9
-			public const int tag_transition_group = 2131230905;
+			public const int text = 2131230905;
 			
 			// aapt resource value: 0x7F0800BA
-			public const int text = 2131230906;
-			
-			// aapt resource value: 0x7F0800BB
-			public const int text2 = 2131230907;
-			
-			// aapt resource value: 0x7F0800BF
-			public const int textinput_counter = 2131230911;
-			
-			// aapt resource value: 0x7F0800C0
-			public const int textinput_error = 2131230912;
-			
-			// aapt resource value: 0x7F0800BC
-			public const int textSpacerNoButtons = 2131230908;
-			
-			// aapt resource value: 0x7F0800BD
-			public const int textSpacerNoTitle = 2131230909;
+			public const int text2 = 2131230906;
 			
 			// aapt resource value: 0x7F0800BE
-			public const int text_input_password_toggle = 2131230910;
+			public const int textinput_counter = 2131230910;
+			
+			// aapt resource value: 0x7F0800BF
+			public const int textinput_error = 2131230911;
+			
+			// aapt resource value: 0x7F0800BB
+			public const int textSpacerNoButtons = 2131230907;
+			
+			// aapt resource value: 0x7F0800BC
+			public const int textSpacerNoTitle = 2131230908;
+			
+			// aapt resource value: 0x7F0800BD
+			public const int text_input_password_toggle = 2131230909;
+			
+			// aapt resource value: 0x7F0800C0
+			public const int time = 2131230912;
 			
 			// aapt resource value: 0x7F0800C1
-			public const int time = 2131230913;
+			public const int title = 2131230913;
 			
 			// aapt resource value: 0x7F0800C2
-			public const int title = 2131230914;
+			public const int titleDividerNoCustom = 2131230914;
 			
 			// aapt resource value: 0x7F0800C3
-			public const int titleDividerNoCustom = 2131230915;
+			public const int title_template = 2131230915;
 			
 			// aapt resource value: 0x7F0800C4
-			public const int title_template = 2131230916;
+			public const int toolbar = 2131230916;
 			
 			// aapt resource value: 0x7F0800C5
-			public const int toolbar = 2131230917;
+			public const int top = 2131230917;
 			
 			// aapt resource value: 0x7F0800C6
-			public const int top = 2131230918;
+			public const int topPanel = 2131230918;
 			
 			// aapt resource value: 0x7F0800C7
-			public const int topPanel = 2131230919;
+			public const int touch_outside = 2131230919;
 			
 			// aapt resource value: 0x7F0800C8
-			public const int touch_outside = 2131230920;
+			public const int transition_current_scene = 2131230920;
 			
 			// aapt resource value: 0x7F0800C9
-			public const int transition_current_scene = 2131230921;
+			public const int transition_layout_save = 2131230921;
 			
 			// aapt resource value: 0x7F0800CA
-			public const int transition_layout_save = 2131230922;
+			public const int transition_position = 2131230922;
 			
 			// aapt resource value: 0x7F0800CB
-			public const int transition_position = 2131230923;
+			public const int transition_scene_layoutid_cache = 2131230923;
 			
 			// aapt resource value: 0x7F0800CC
-			public const int transition_scene_layoutid_cache = 2131230924;
+			public const int transition_transform = 2131230924;
 			
 			// aapt resource value: 0x7F0800CD
-			public const int transition_transform = 2131230925;
+			public const int uniform = 2131230925;
 			
 			// aapt resource value: 0x7F0800CE
-			public const int uniform = 2131230926;
+			public const int up = 2131230926;
 			
 			// aapt resource value: 0x7F0800CF
-			public const int up = 2131230927;
+			public const int useLogo = 2131230927;
 			
 			// aapt resource value: 0x7F0800D0
-			public const int useLogo = 2131230928;
+			public const int view_offset_helper = 2131230928;
 			
 			// aapt resource value: 0x7F0800D1
-			public const int view_offset_helper = 2131230929;
+			public const int visible = 2131230929;
 			
 			// aapt resource value: 0x7F0800D2
-			public const int visible = 2131230930;
+			public const int volume_item_container = 2131230930;
 			
 			// aapt resource value: 0x7F0800D3
-			public const int volume_item_container = 2131230931;
+			public const int withText = 2131230931;
 			
 			// aapt resource value: 0x7F0800D4
-			public const int withText = 2131230932;
-			
-			// aapt resource value: 0x7F0800D5
-			public const int wrap_content = 2131230933;
+			public const int wrap_content = 2131230932;
 			
 			static Id()
 			{
@@ -6700,6 +6799,9 @@ namespace OpenShelter.Droid
 			
 			// aapt resource value: 0x7F0E00AD
 			public const int CardView_Light = 2131624109;
+			
+			// aapt resource value: 0x7F0E0192
+			public const int collectionViewStyle = 2131624338;
 			
 			// aapt resource value: 0x7F0E00AE
 			public const int MainTheme = 2131624110;
@@ -9579,6 +9681,22 @@ namespace OpenShelter.Droid
 			}
 			
 			private Styleable()
+			{
+			}
+		}
+		
+		public partial class Xml
+		{
+			
+			// aapt resource value: 0x7F100000
+			public const int xamarin_essentials_fileprovider_file_paths = 2131755008;
+			
+			static Xml()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Xml()
 			{
 			}
 		}

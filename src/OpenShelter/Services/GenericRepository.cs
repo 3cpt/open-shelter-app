@@ -3,6 +3,7 @@ using System.IO;
 using SQLite;
 using System.Linq.Expressions;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace OpenShelter.Services
 {
@@ -32,13 +33,13 @@ namespace OpenShelter.Services
             }
         }
 
-        public List<T> GetAll(Expression<Func<T, bool>> expression)
+        public List<T> GetAll(Func<T, bool> expression)
         {
             try
             {
                 return connection.Table<T>().Where(expression).ToList();
             }
-            catch
+            catch (Exception e)
             {
                 return default;
             }

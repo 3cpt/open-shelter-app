@@ -26,7 +26,7 @@ namespace OpenShelter.Views.Admin
 
         private void RefreshList()
         {
-            var volunteers = this.volunterRepository.GetAll(v => v.Visible == true);
+            var volunteers = this.volunterRepository.GetAll(v => true);
 
             this.lvVolunteers.ItemsSource = new ObservableCollection<Volunter>(volunteers);
         }

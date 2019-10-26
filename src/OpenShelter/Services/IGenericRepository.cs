@@ -9,6 +9,6 @@ namespace OpenShelter.Services
         int Add(T entity);
         int Update(T entity);
         T Get(Expression<Func<T, bool>> expression);
-        List<T> GetAll(Expression<Func<T, bool>> expression);
+        List<T> GetAll(Func<T, bool> expression);
     }
 }

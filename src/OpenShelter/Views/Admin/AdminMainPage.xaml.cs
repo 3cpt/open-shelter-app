@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-
 using Xamarin.Forms;
 
 namespace OpenShelter.Views.Admin
@@ -19,7 +17,7 @@ namespace OpenShelter.Views.Admin
 
         async void OnDownloadPageButtonClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new AdminMainPage());
+            await Navigation.PushAsync(new AdminDownloadPage());
         }
     }
 }

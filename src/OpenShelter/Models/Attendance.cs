@@ -19,7 +19,6 @@ namespace OpenShelter.Models
 
         public string TaskType { get; set; }
 
-
         public string Banner
         {
 
