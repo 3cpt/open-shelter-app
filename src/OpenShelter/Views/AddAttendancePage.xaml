@@ -10,6 +10,7 @@
                 <x:String>Limpezas</x:String>
                 <x:String>Medicação</x:String>
                 <x:String>Visita</x:String>
+                <x:String>Adopções</x:String>
                 <x:String>Outros</x:String>
             </Picker.Items>
         </Picker>

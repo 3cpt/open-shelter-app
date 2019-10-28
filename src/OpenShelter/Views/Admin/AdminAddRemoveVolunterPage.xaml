@@ -8,6 +8,8 @@
 
         <Entry x:Name="txtPassword" Keyboard="Numeric" IsPassword="False" Placeholder="Palavra-chave" />
 
+        <Label Text="Utilizador ativo?" />
+
         <CheckBox x:Name="cbActive" />
 
         <Button Text="Adicionar Voluntário" Clicked="OnAddVolunterClick" />

@@ -17,6 +17,8 @@ namespace OpenShelter
         {
             InitializeComponent();
 
+            NavigationPage.SetHasNavigationBar(this, false);
+
             this.attendanceRepository = DependencyService.Get<IAttendanceRepository>();
         }
 
@@ -28,6 +30,11 @@ namespace OpenShelter
         async void OnAdminPageButtonClicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new AdminLoginPage());
+        }
+
+        async void OnAboutPageButtonClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new AboutPage());
         }
 
         protected override void OnAppearing()

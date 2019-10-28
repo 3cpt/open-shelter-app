@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:OpenShelter" x:Class="OpenShelter.MainPage" Title="Presenças">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:OpenShelter" x:Class="OpenShelter.MainPage" Title="Open Shelter">
     <StackLayout>
+
+        <Image Source="logotipo1" WidthRequest="{OnPlatform iOS=300, Android=250}" HorizontalOptions="Center" />
 
         <Label Text="Entradas de Hoje" />
 
@@ -36,7 +38,9 @@
             </ListView.ItemTemplate>
         </ListView>
 
-        <Button Text="Entrada" Clicked="OnAddAttendancePageButtonClicked" />
+        <Button Text="Entrada" Clicked="OnAddAttendancePageButtonClicked" TextColor="Black" BackgroundColor="LightPink" BorderColor="Black" BorderWidth="1" CornerRadius="1" />
+
+        <Button Text="About" Clicked="OnAboutPageButtonClicked" />
 
         <Button Text="Admin Login" Clicked="OnAdminPageButtonClicked" />
     </StackLayout>
