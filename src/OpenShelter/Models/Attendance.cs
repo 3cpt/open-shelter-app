@@ -24,7 +24,7 @@ namespace OpenShelter.Models
 
             get
             {
-                return string.Format("{0} / {1}", Name, TaskType);
+                return string.Format("{0} | {1}", Name, TaskType);
             }
         }
 
@@ -33,7 +33,12 @@ namespace OpenShelter.Models
 
             get
             {
-                return string.Format("{0} - {1}", EnterTime.ToString("HH:mm dd-MM-yyyy"), ExitTime != default ? ExitTime.ToString("HH:mm dd-MM-yyyy") : String.Empty);
+                if (ExitTime != default)
+                {
+                    return string.Format("{0} | {1}", EnterTime.ToString("HH:mm dd-MM-yyyy"), ExitTime.ToString("HH:mm dd-MM-yyyy"));
+                }
+
+                return string.Format("{0}", EnterTime.ToString("HH:mm dd-MM-yyyy"));
             }
         }
     }

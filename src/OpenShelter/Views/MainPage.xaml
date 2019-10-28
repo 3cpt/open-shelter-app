@@ -4,41 +4,51 @@
 
         <Image Source="logotipo1" WidthRequest="{OnPlatform iOS=300, Android=250}" HorizontalOptions="Center" />
 
-        <Label Text="Entradas de Hoje" />
+        <Frame CornerRadius="1" Padding="1">
+            <StackLayout>
+                <Label Text="Entradas de Hoje" FontSize="Large" TextColor="Black" />
 
-        <ListView x:Name="lvAttendances" ItemTapped="OnItemTapped">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
-                            <StackLayout Orientation="Vertical">
-                                <Label Text="{Binding Banner}" FontAttributes="Bold" />
-                                <Label Text="{Binding Description}" />
-                            </StackLayout>
-                        </StackLayout>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+                <ListView x:Name="lvAttendances" ItemTapped="OnItemTapped">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
+                                    <StackLayout Orientation="Vertical">
+                                        <Label Text="{Binding Banner}" FontAttributes="Bold" />
+                                        <Label Text="{Binding Description}" />
+                                    </StackLayout>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </Frame>
 
-        <Label Text="Saídas de Hoje" />
+        <Frame CornerRadius="1" Padding="1">
+            <StackLayout>
 
-        <ListView x:Name="lvAttendancesExit">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
-                            <StackLayout Orientation="Vertical">
-                                <Label Text="{Binding Banner}" FontAttributes="Bold" />
-                                <Label Text="{Binding Description}" />
-                            </StackLayout>
-                        </StackLayout>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+                <Label Text="Saídas de Hoje" FontSize="Large" TextColor="Black" />
 
-        <Button Text="Entrada" Clicked="OnAddAttendancePageButtonClicked" TextColor="Black" BackgroundColor="LightPink" BorderColor="Black" BorderWidth="1" CornerRadius="1" />
+                <ListView x:Name="lvAttendancesExit">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell IsEnabled="False">
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
+                                    <StackLayout Orientation="Vertical">
+                                        <Label Text="{Binding Banner}" FontAttributes="Bold" />
+                                        <Label Text="{Binding Description}" />
+                                    </StackLayout>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </Frame>
+
+
+        <Button Text="Entrada" Clicked="OnAddAttendancePageButtonClicked" TextColor="Black" BackgroundColor="DarkGray" BorderColor="Black" BorderWidth="1" CornerRadius="1" />
 
         <Button Text="About" Clicked="OnAboutPageButtonClicked" />
 

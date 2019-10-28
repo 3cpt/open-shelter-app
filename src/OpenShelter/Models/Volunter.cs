@@ -20,7 +20,7 @@ namespace OpenShelter.Models
 
             get
             {
-                return string.Format("{0} / {1}", Username, Visible == true ? "Activo" : "INactivo");
+                return string.Format("{0} | {1}", Username, Visible == true ? "Activo" : "INactivo");
             }
         }
     }
